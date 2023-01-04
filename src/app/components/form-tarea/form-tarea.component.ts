@@ -25,5 +25,6 @@ export class FormTareaComponent {
     };
 
     this.tareaEmit.emit(tarea);
+    this.miFormulario.reset();
   }
 }
