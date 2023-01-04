@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Tarea } from 'src/interfaces/tarea.interface';
 
 @Component({
   selector: 'app-lista-tareas',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   ]
 })
 export class ListaTareasComponent {
-
+  @Input() listaTareas: Array<Tarea> = [];
 }

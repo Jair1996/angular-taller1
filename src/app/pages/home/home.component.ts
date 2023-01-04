@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Tarea } from 'src/interfaces/tarea.interface';
 
 @Component({
   selector: 'app-home',
@@ -7,5 +8,9 @@ import { Component } from '@angular/core';
   ]
 })
 export class HomeComponent {
+  listaTareas: Array<Tarea> = [];
 
+  guardarTarea(tarea: Tarea) {
+    this.listaTareas.push(tarea);
+  }
 }
