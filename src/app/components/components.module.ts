@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormTareaComponent } from './form-tarea/form-tarea.component';
 import { ListaTareasComponent } from './lista-tareas/lista-tareas.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -15,7 +16,8 @@ import { ListaTareasComponent } from './lista-tareas/lista-tareas.component';
     ListaTareasComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
   ]
 })
 export class ComponentsModule { }
