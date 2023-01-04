@@ -1,4 +1,4 @@
-<section>
+<section *ngIf="listaTareas.length !== 0; else listaVacia">
   <h1 class="text-center text-gray-500 mb-8">Lista de Tareas</h1>
 
   <div class="mx-auto w-48 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
@@ -7,3 +7,7 @@
     </button>
   </div>
 </section>
+
+<ng-template #listaVacia>
+  <h1 class="text-center text-gray-500 mb-8">Lista de tareas vacía</h1>
+</ng-template>
