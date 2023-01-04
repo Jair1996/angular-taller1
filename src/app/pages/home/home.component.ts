@@ -9,8 +9,13 @@ import { Tarea } from 'src/interfaces/tarea.interface';
 })
 export class HomeComponent {
   listaTareas: Array<Tarea> = [];
+  tareaSeleccionada!: Tarea;
 
   guardarTarea(tarea: Tarea) {
     this.listaTareas.push(tarea);
+  }
+
+  guardarTareaSeleccionada(tarea: Tarea) {
+    this.tareaSeleccionada = tarea
   }
 }

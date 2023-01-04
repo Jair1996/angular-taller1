@@ -1,4 +1,9 @@
 <main class="w-5/6 mx-auto grid grid-cols-2 pt-8 gap-4 min-h-screen">
-  <app-form-tarea (tareaEmit)="guardarTarea($event)"></app-form-tarea>
-  <app-lista-tareas [listaTareas]="listaTareas"></app-lista-tareas>
+  <div>
+    <app-form-tarea (tareaEmit)="guardarTarea($event)"></app-form-tarea>
+    <article class="mt-8">
+      <app-detalle-tarea [tarea]="tareaSeleccionada"></app-detalle-tarea>
+    </article>
+  </div>
+  <app-lista-tareas [listaTareas]="listaTareas" (tareaSeleccionada)="guardarTareaSeleccionada($event)"></app-lista-tareas>
 </main>
